@@ -1,5 +1,6 @@
 package com.challenger.hungry4music.service;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -56,5 +57,19 @@ public class ArtistService {
 		Example<Artist> example = Example.of(p, matcher);
 		return artistRepository.findAll(example);
 	}
-	
+
+	public void inserList(List<Artist> list2) {			
+		List<Artist> list = new ArrayList<Artist>();
+		for(Artist p : list2) {
+			
+			
+//			Optional<Artist> optional = this.artistRepository.findById(p.getId().intValue());
+			//só insere no banco caso não tenha
+//			if(!optional.isPresent()) {
+//				insert(p);
+//				list.add(p);
+//				System.out.println("Item incluido: "+p.getName());
+//			}			
+		}
+	}
 }
